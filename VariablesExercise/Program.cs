@@ -39,18 +39,19 @@
             Console.WriteLine($"Level {userResponseLevel}! You are Powerful! I deem you worthy to begin this Quest!" +
                               $" Will you Poceed (Yes/No)?");
 
-            string StartQuest = Console.ReadLine();
+            string StartQuest = Console.ReadLine().ToLower();
+            
+            //added toLower to remove capitalization inconsistencies with answers
 
-            if (StartQuest == "Yes") 
+            if (StartQuest == "yes" || StartQuest == "sure") 
                 Console.WriteLine("Let the adventure begin!");
-            else if (StartQuest == "yes")
-                Console.WriteLine("Let the adventure begin!");
-            else if (StartQuest == "No")
+            else if (StartQuest == "no" || StartQuest == "no thanks")
                 Console.WriteLine("Understanable! Prehaps a nap first!");
-            else if (StartQuest == "no")
-                Console.WriteLine("Understanable! Prehaps a nap first!");
-            // Have not reviewed methods yes so this isnt effecient but should work to 
+            // add || or functions to accomodate some other answers
             // accomodate expected answers Yes, yes, No, no. 
+            
+            
+            
         }
     }
 }
